@@ -1,6 +1,6 @@
-# 📊 node-apiTracker
+# 📊 node-api-Insights
 
-**node-apiTracker** is an open-source Node.js library that gives you **full analytics of any API endpoint — right inside your terminal**. Whether you're building REST APIs or microservices, this lightweight tool helps you **analyze performance, track requests, and debug faster** with clean, real-time logs.
+**node-api-Insights** is an open-source Node.js library that gives you **full analytics of any API endpoint — right inside your terminal**. Whether you're building REST APIs or microservices, this lightweight tool helps you **analyze performance, track requests, and debug faster** with clean, real-time logs.
 
 ---
 
@@ -27,4 +27,4 @@
 ## 📦 Installation
 
 ```bash
-npm install node-apitracker
+npm install node-api-insights
