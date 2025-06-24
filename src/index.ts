@@ -3,7 +3,7 @@ generateGitFile();
 class ApiTracker {
   constructor() {}
 
-  async apiTime(fn) {
+  async apiTime(fn: () => Promise<any>) {
     try {
       const start = process.hrtime();
       await fn();
