@@ -1,10 +1,15 @@
 const generateGitFile = require("giv-gitignore");
 generateGitFile();
 class ApiTracker {
-  constructor() {}
+  public reqCounter: number;
+
+  constructor() {
+    this.reqCounter = 0;
+  }
 
   async apiTime(fn: () => Promise<any>) {
     try {
+      this.reqCounter++;
       const start = process.hrtime();
       await fn();
       const end = process.hrtime(start);
@@ -25,6 +30,20 @@ class ApiTracker {
       }
 
       console.log(`Response Time: ${time}ms - ${performance}`);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async requestCount() {
+    return console.log(this.reqCounter);
+  }
+
+  async payLoadSize(data: JSON) {
+    try {
+      const jsonData = JSON.stringify(data);
+      const size = Buffer.from(jsonData).length;
+      console.log(size);
     } catch (error) {
       console.log(error);
     }
